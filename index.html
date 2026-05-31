@@ -157,6 +157,20 @@
       max-width: 1020px;
       text-align: left;
     }
+    .screen-showcase-home {
+      grid-template-columns: minmax(0, 390px);
+      justify-content: center;
+      max-width: 430px;
+    }
+    .section-visual-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .section-visual-stack .screen-card {
+      width: min(100%, 430px);
+      margin: 0 auto;
+    }
     .screen-card {
       background: rgba(15,23,42,0.86);
       border: 1px solid var(--border);
@@ -377,6 +391,7 @@
       .workflow-card span { display: block; }
       .workflow-strip { grid-template-columns: repeat(4, 1fr); }
       .screen-showcase { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .screen-showcase-home { grid-template-columns: minmax(0, 390px); }
     }
   </style>
 </head>
@@ -425,7 +440,7 @@
         </div>
         <div class="hero-sub">No account. No subscription. Your data stays on your device.</div>
 
-        <div class="screen-showcase" aria-label="FossilMap and FossilMapped screenshots">
+        <div class="screen-showcase screen-showcase-home" aria-label="FossilMap home screenshot">
           <article class="screen-card">
             <div class="screen-media">
               <img src="home.png" alt="FossilMap home dashboard on a mobile phone" loading="eager" />
@@ -433,24 +448,6 @@
             <div class="screen-caption">
               <b>Field dashboard</b>
               <span>Trips, locations, finds, tools and backup prompts in one local-first workspace.</span>
-            </div>
-          </article>
-          <article class="screen-card">
-            <div class="screen-media">
-              <img src="finds.png" alt="FossilMap add find workflow on a mobile phone" loading="eager" />
-            </div>
-            <div class="screen-caption">
-              <b>Add a find</b>
-              <span>Mobile wizard for identification, GPS, photos, measurements and storage notes.</span>
-            </div>
-          </article>
-          <article class="screen-card screen-card-blue">
-            <div class="screen-media">
-              <img src="fossilmapped.png" alt="FossilMapped shared research portal on a mobile phone" loading="lazy" />
-            </div>
-            <div class="screen-caption">
-              <b>Shared research portal</b>
-              <span>Map, records, gallery, analytics, citations and access requests for public finds.</span>
             </div>
           </article>
         </div>
@@ -513,7 +510,16 @@
             </div>
           </div>
 
-          <div>
+          <div class="section-visual-stack">
+            <article class="screen-card">
+              <div class="screen-media">
+                <img src="finds.png" alt="FossilMap add find workflow on a mobile phone" loading="lazy" />
+              </div>
+              <div class="screen-caption">
+                <b>Add a find in the field</b>
+                <span>The recording workflow keeps identification, location, photos, measurements and storage notes together.</span>
+              </div>
+            </article>
             <div id="mock-specimen" class="mock-card">
               <div class="mock-label">Example specimen record</div>
               <div class="mock-row"><span class="mock-key">Ref</span><span class="mock-val mono">UK-2024-483921</span></div>
@@ -598,6 +604,15 @@
           </div>
 
           <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <article class="screen-card screen-card-blue">
+              <div class="screen-media">
+                <img src="fossilmapped.png" alt="FossilMapped shared research portal on a mobile phone" loading="lazy" />
+              </div>
+              <div class="screen-caption">
+                <b>Shared research portal</b>
+                <span>Public finds can be explored as a map, record list, gallery and analytics dashboard.</span>
+              </div>
+            </article>
             <div style="background: rgba(37,99,235,0.08); border: 1px solid rgba(37,99,235,0.18); border-radius: 18px; padding: 1.5rem;">
               <div style="font-size: 0.65rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.12em; color: #60a5fa; margin-bottom: 1rem;">What makes a shareable record</div>
               <div class="checklist">
