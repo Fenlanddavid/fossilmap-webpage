@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use | FossilMap</title>
+  <meta name="description" content="FossilMap terms of use and ownership information." />
+  <meta name="copyright" content="FossilMap">
+  <meta property="og:site_name" content="FossilMap">
+  <link rel="icon" href="logo.svg" type="image/svg+xml" />
+
+  <style>
+    :root {
+      --bg: #020617;
+      --bg-soft: #0f172a;
+      --panel: #1e293b;
+      --accent: #10b981;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --border: rgba(255,255,255,0.06);
+      --shadow: 0 20px 50px rgba(0,0,0,0.5);
+      --radius: 24px;
+      --max: 760px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    h1, h2, h3 { letter-spacing: 0; line-height: 1.15; font-weight: 900; margin: 0; }
+    .container { width: min(var(--max), calc(100% - 2.5rem)); margin: 0 auto; }
+
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(11,15,18,0.94);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+    }
+    .nav-inner {
+      min-height: 70px; display: flex; align-items: center;
+      justify-content: space-between; gap: 1rem; padding: 0.5rem 0;
+    }
+    .logo-wrap {
+      display: flex; flex-direction: row; align-items: center;
+      gap: 0.6rem; flex-shrink: 0; padding-left: 8px;
+    }
+    .logo-wrap img { width: 32px; height: 32px; object-fit: contain; }
+    .logo-name { font-size: 1rem; font-weight: 900; color: var(--text); line-height: 1; }
+    .brand-tag {
+      color: var(--accent); font-size: 0.58rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.02em; margin-top: 2px;
+      opacity: 0.9; white-space: nowrap;
+    }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0.65rem 1.1rem; border-radius: 12px; font-weight: 800;
+      font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em;
+      text-decoration: none; background: var(--accent); color: #064e3b;
+      border: none; transition: all 0.2s ease; white-space: nowrap;
+    }
+    .btn-primary:hover { background: #34d399; transform: translateY(-1px); }
+
+    main { padding: 4rem 0 6rem; }
+
+    .page-header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--border); }
+    .eyebrow {
+      display: inline-block; font-size: 0.7rem; font-weight: 800;
+      text-transform: uppercase; letter-spacing: 0.15em; color: var(--accent); margin-bottom: 1rem;
+    }
+    .page-header h1 { font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 0.75rem; }
+    .page-header p { color: var(--muted); font-size: 0.95rem; margin: 0; }
+
+    .section { margin-bottom: 3rem; }
+    .section h2 {
+      font-size: 1.2rem; color: var(--text); margin-bottom: 1rem;
+      padding-bottom: 0.5rem; border-bottom: 1px solid var(--border);
+    }
+    .section p { color: var(--muted); font-size: 0.95rem; margin: 0 0 0.75rem; line-height: 1.7; }
+    .section p:last-child { margin-bottom: 0; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1rem; }
+    @media (max-width: 580px) { .two-col { grid-template-columns: 1fr; } }
+
+    .ownership-box {
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-radius: 16px; padding: 1.5rem;
+    }
+    .ownership-box h3 {
+      font-size: 0.75rem; font-weight: 800; text-transform: uppercase;
+      letter-spacing: 0.12em; color: var(--accent); margin-bottom: 0.75rem;
+    }
+    .ownership-box ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.4rem; }
+    .ownership-box li { font-size: 0.9rem; color: var(--muted); padding-left: 1rem; position: relative; }
+    .ownership-box li::before { content: '·'; position: absolute; left: 0; color: var(--accent); font-weight: 900; }
+
+    .user-box { border-color: rgba(16,185,129,0.2); }
+
+    footer {
+      padding: 3rem 0; border-top: 1px solid var(--border);
+      text-align: center; color: var(--muted); font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" aria-label="FossilMap home" style="text-decoration: none;">
+        <span class="logo-wrap">
+          <img src="logo.svg" alt="FossilMap" />
+          <span style="display: flex; flex-direction: column;">
+            <span class="logo-name" style="background: linear-gradient(to right, #2563eb, #14b8a6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">FossilMap</span>
+            <span class="brand-tag">UK Fossil Recording</span>
+          </span>
+        </span>
+      </a>
+      <a href="https://fenlanddavid.github.io/fossilmap/" class="btn-primary">Open App</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+
+      <div class="page-header">
+        <span class="eyebrow">Legal</span>
+        <h1>Terms of Use</h1>
+        <p>Last updated: May 2026</p>
+      </div>
+
+      <div class="section">
+        <h2>About FossilMap</h2>
+        <p>FossilMap is a free field recording platform for UK fossil hunters and amateur palaeontologists. It includes specimen recording, locality management, field trip tracking, tide planning and geological reference tools.</p>
+        <p>FossilMap is provided free of charge. No account is required. Your specimens, localities and photos are stored locally on your own device and never transmitted to our servers.</p>
+      </div>
+
+      <div class="section">
+        <h2>Ownership</h2>
+        <p>FossilMap is a proprietary application. The following assets remain the intellectual property of FossilMap.</p>
+
+        <div class="two-col">
+          <div class="ownership-box">
+            <h3>FossilMap owns</h3>
+            <ul>
+              <li>The FossilMap application and branding</li>
+              <li>Website content and design</li>
+              <li>Specimen code format and classification system</li>
+              <li>Report layouts and templates</li>
+              <li>Export formats and field trip workflows</li>
+              <li>Workflow and interface design</li>
+            </ul>
+          </div>
+          <div class="ownership-box user-box">
+            <h3>You own</h3>
+            <ul>
+              <li>Your specimen records</li>
+              <li>Your photographs</li>
+              <li>Your locality details and notes</li>
+              <li>Your field trip records</li>
+              <li>All locally stored content you create</li>
+              <li>Any imported content</li>
+            </ul>
+          </div>
+        </div>
+
+        <p style="margin-top: 1.25rem;">Use of FossilMap does not grant rights to reproduce, copy or recreate any proprietary systems, methods or outputs.</p>
+      </div>
+
+      <div class="section">
+        <h2>Restrictions</h2>
+        <p>Without written permission from FossilMap, you may not:</p>
+        <div class="ownership-box" style="margin-top: 0.5rem;">
+          <ul>
+            <li>Reverse engineer or decompile any part of FossilMap</li>
+            <li>Reproduce report layouts or field trip templates commercially</li>
+            <li>Copy workflows, interface design or export formats for competing tools</li>
+            <li>Use FossilMap outputs to train or build competing systems</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Data and Privacy</h2>
+        <p>FossilMap is local-first. Your specimen records, GPS positions and photos are stored on your device only and are never uploaded to our servers.</p>
+        <p>See our <a href="privacy.html" style="color: var(--accent); text-decoration: none; font-weight: 700;">Privacy page</a> for full details.</p>
+      </div>
+
+      <div class="section">
+        <h2>Disclaimer</h2>
+        <p>FossilMap is provided as a field recording aid. Tide gauge data and geological reference information are provided for convenience only and may not always be accurate. Always check tide tables and local conditions from official sources before visiting foreshore or cliff-base sites.</p>
+        <p>FossilMap accepts no liability for decisions made based on data presented within the app.</p>
+      </div>
+
+      <div class="section">
+        <h2>Contact</h2>
+        <p>Questions about these terms can be directed via the <a href="contact.html" style="color: var(--accent); text-decoration: none; font-weight: 700;">contact form</a>.</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© <span id="year"></span> FossilMap. All rights reserved.</p>
+      <div style="margin-top: 1.25rem; display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem 1.5rem; font-size: 0.8rem; font-weight: 700;">
+        <a href="index.html" style="color: var(--accent); text-decoration: none;">← Back to FossilMap</a>
+        <a href="privacy.html" style="color: var(--muted); text-decoration: none; opacity: 0.65;">Privacy</a>
+        <a href="contact.html" style="color: var(--muted); text-decoration: none; opacity: 0.65;">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
