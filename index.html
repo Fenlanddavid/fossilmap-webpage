@@ -4,19 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FossilMap | The UK's Fossil Recording Platform</title>
-  <meta name="description" content="FossilMap is the UK's national fossil recording and research platform. Record discoveries, preserve provenance and contribute to the scientific understanding of Britain's fossil heritage." />
+  <meta name="description" content="FossilMap helps UK fossil collectors record finds properly with GPS, photographs and geological context. Build a collection you can be proud of and share records when you're ready." />
   <link rel="icon" href="logo.svg" type="image/svg+xml" />
   <meta name="copyright" content="FossilMap">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://fenlanddavid.github.io/fossilmap/">
   <meta property="og:site_name" content="FossilMap">
   <meta property="og:title" content="FossilMap | The UK's Fossil Recording Platform">
-  <meta property="og:description" content="Record Discoveries. Preserve Provenance. Support Research. The national fossil recording platform for collectors and scientists.">
+  <meta property="og:description" content="Record your finds, preserve provenance and build better fossil records. Easy enough for your first fossil, good enough for serious research.">
   <meta property="og:image" content="https://fenlanddavid.github.io/fossilmap/logo.svg">
   <meta property="og:image:alt" content="FossilMap fossil recording platform">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="FossilMap | The UK's Fossil Recording Platform">
-  <meta name="twitter:description" content="Record Discoveries. Preserve Provenance. Support Research.">
+  <meta name="twitter:description" content="Record your finds. Preserve what matters.">
   <meta name="twitter:image" content="https://fenlanddavid.github.io/fossilmap/logo.svg">
   <script type="application/ld+json">
   {
@@ -27,7 +27,7 @@
     "applicationCategory": "UtilitiesApplication",
     "offers": { "@type": "Offer", "price": "0", "priceCurrency": "GBP" },
     "url": "https://fenlanddavid.github.io/fossilmap/",
-    "description": "The UK national fossil recording and research platform. Record discoveries with full stratigraphic context, GPS provenance and photographs. Contribute to scientific research.",
+    "description": "The UK fossil recording platform for collectors. Record discoveries with GPS provenance, photographs and geological context, then share selected records when you're ready.",
     "author": { "@type": "Person", "name": "FossilMap" }
   }
   </script>
@@ -318,6 +318,42 @@
     .benefit-tick.green { background: var(--accent-dim); color: var(--accent); border: 1px solid var(--accent-border); }
     .benefit-tick.blue { background: var(--blue-dim); color: var(--blue); border: 1px solid var(--blue-border); }
 
+    /* ── RECORD LEVELS ── */
+    .trust-section {
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .trust-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.25rem;
+    }
+    .trust-icon {
+      display: block;
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+    }
+    .trust-card h3 {
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text);
+      margin-bottom: 0.35rem;
+    }
+    .trust-card p {
+      color: var(--muted);
+      font-size: 0.86rem;
+      line-height: 1.55;
+    }
+
     /* ── STATISTICS ── */
     .stats-section {
       background: var(--bg-mid);
@@ -369,6 +405,44 @@
     .feature-dot-blue { width: 8px; height: 8px; border-radius: 2px; background: var(--blue); margin-top: 0.45rem; flex-shrink: 0; }
     .feature-text b { display: block; font-size: 0.97rem; margin-bottom: 0.2rem; color: var(--text); font-weight: 700; }
     .feature-text span { color: var(--muted); font-size: 0.88rem; line-height: 1.55; }
+    .quality-box {
+      margin: -0.75rem auto 2.5rem;
+      max-width: 820px;
+      border: 1px solid var(--accent-border);
+      background: linear-gradient(135deg, rgba(74,222,128,0.08), var(--panel) 68%);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .quality-box h3 {
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.98rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+    .quality-box p {
+      color: var(--muted-bright);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin-bottom: 1rem;
+    }
+    .quality-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      list-style: none;
+    }
+    .quality-list li {
+      border: 1px solid var(--accent-border);
+      background: var(--accent-dim);
+      border-radius: 999px;
+      color: var(--muted-bright);
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+    }
     /* ── FIELD TOOLS ── */
     .trip-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.25rem; margin-top: 2.5rem; }
     .trip-card {
@@ -434,6 +508,30 @@
     }
     .screen-media { aspect-ratio: 1080/2410; overflow: hidden; background: var(--bg); }
     .screen-media img { width: 100%; height: 100%; object-fit: contain; object-position: top center; display: block; }
+    .screen-media.fm-preview { position: relative; }
+    .screen-media.fm-preview::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      inset: 0 0 auto;
+      height: 29%;
+      background: linear-gradient(180deg, #0b1118 0%, #0b1118 76%, rgba(11,17,24,0.94) 100%);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .screen-media.fm-preview::after {
+      content: "FOSSILMAPPED · SHARED FOSSIL DATABASE";
+      position: absolute;
+      z-index: 2;
+      left: 8%;
+      right: 8%;
+      top: 15%;
+      color: #f8fafc;
+      font-family: "DM Sans", sans-serif;
+      font-size: 0.64rem;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      line-height: 1.4;
+    }
     .screen-caption { padding: 1rem 1.15rem 1.15rem; border-top: 1px solid var(--border); }
     .screen-caption b { display: block; color: var(--text); font-size: 0.9rem; margin-bottom: 0.3rem; font-weight: 700; }
     .screen-caption span { display: block; color: var(--muted); font-size: 0.82rem; line-height: 1.55; }
@@ -508,6 +606,7 @@
     /* ── RESPONSIVE ── */
     @media (min-width: 640px) {
       .why-grid { grid-template-columns: 1fr 1fr; }
+      .trust-grid { grid-template-columns: repeat(3, 1fr); }
       .stats-grid { grid-template-columns: repeat(4, 1fr); }
       .science-grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -564,7 +663,7 @@
       .benefit-item:nth-child(n+4) { display: none; }
       .recording-section .feature-item:nth-child(n+4),
       .fm-section .feature-list .feature-item:nth-child(n+3),
-      .trip-card:nth-child(n+3),
+      .trip-card.optional-mobile,
       .privacy-item:nth-child(n+3),
       .fm-support {
         display: none;
@@ -602,14 +701,14 @@
         </span>
       </a>
       <div class="nav-links">
+        <a href="#workflow">How It Works</a>
         <a href="#why-recording-matters">Why Record</a>
         <a href="#collectors">For Collectors</a>
-        <a href="#researchers">For Researchers</a>
         <a href="#fossilmapped">FossilMapped</a>
         <a href="#faq">FAQ</a>
       </div>
       <a class="nav-cta" href="https://fenlanddavid.github.io/fossilmap/">
-        <span class="nav-cta-full">Record Finds Free</span>
+        <span class="nav-cta-full">Open FossilMap</span>
         <span class="nav-cta-short">Open App</span>
       </a>
     </div>
@@ -629,19 +728,19 @@
         <h1>Record your finds.<br>Preserve what matters.</h1>
         <p class="hero-tagline">Every fossil tells a story. FossilMap makes sure the full story gets recorded.</p>
         <p class="hero-lead">
-          FossilMap is the UK's fossil recording platform — free for collectors of all levels.
-          Capture GPS, photographs and stratigraphic context in the field, contribute to the
-          national research record, and build a collection you can be proud of.
+          Capture GPS, photographs and geological context in the field. Build a collection you can be proud of and contribute to the UK's growing fossil record when you're ready.
         </p>
+        <p style="font-size:0.88rem; color:var(--muted); max-width:560px; margin:0 auto 1.75rem; line-height:1.6; font-style:italic;">FossilMap helps collectors record better finds. FossilMapped helps those shared records become useful research data.</p>
         <div class="hero-actions">
           <a href="https://fenlanddavid.github.io/fossilmap/" class="btn btn-primary">
-            Record Finds Free
+            Open FossilMap
           </a>
           <a href="https://fenlanddavid.github.io/fossilmapped/" class="btn btn-blue" target="_blank" rel="noopener noreferrer">
-            Explore Research Data &#8599;
+            Browse FossilMapped &#8599;
           </a>
         </div>
         <p class="hero-note">Free &nbsp;·&nbsp; No account &nbsp;·&nbsp; Works offline &nbsp;·&nbsp; Your data stays on your device</p>
+        <p class="hero-note" style="margin-top:0.35rem; color:var(--muted); font-style:italic; font-weight:500;">Record privately first. Share only when you are ready.</p>
 
         <article class="screen-card hero-shot">
           <div class="screen-media">
@@ -663,10 +762,63 @@
           <div class="proof-item"><span class="proof-dot"></span>No account required</div>
           <div class="proof-item"><span class="proof-dot"></span>Works offline in the field</div>
           <div class="proof-item"><span class="proof-dot"></span>GPS provenance on every find</div>
-          <div class="proof-item"><span class="proof-dot"></span>Research-quality records</div>
+          <div class="proof-item"><span class="proof-dot"></span>Long-term fossil records</div>
         </div>
       </div>
     </div>
+
+    <!-- ── APP WORKFLOW ── -->
+    <section id="workflow" style="background:var(--bg-soft); border-bottom:1px solid var(--border);">
+      <div class="container">
+        <div style="text-align:center; max-width:660px; margin:0 auto 3rem;">
+          <span class="section-tag">How FossilMap works</span>
+          <h2 class="section-title">A proper field-recording workflow.</h2>
+          <p class="section-lead" style="margin:0 auto;">
+            FossilMap is built around how fossil recording actually works in the field. Start with a known locality or field trip, record specimens with GPS, photographs and geological context, then generate a structured field report when needed.
+          </p>
+          <p style="font-size:0.92rem; color:var(--accent); line-height:1.6; margin-top:1.25rem; font-style:italic; font-weight:600; border-left:3px solid var(--accent-border); padding-left:1rem; text-align:left; max-width:500px; margin-left:auto; margin-right:auto;">
+            Simple enough for a first fossil. Structured enough to preserve useful scientific context.
+          </p>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:1rem; margin-bottom:2.5rem;">
+          <div style="background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:1.6rem; position:relative;">
+            <div style="font-family:'Playfair Display',serif; font-size:2.5rem; font-weight:900; color:var(--accent-border); line-height:1; position:absolute; top:1rem; right:1.25rem;">1</div>
+            <div style="font-size:0.65rem; font-weight:800; text-transform:uppercase; letter-spacing:0.14em; color:var(--accent); margin-bottom:0.6rem;">Locations</div>
+            <h3 style="font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:700; color:var(--text); margin-bottom:0.5rem; padding-right:2.5rem;">Set up your localities</h3>
+            <p style="font-size:0.87rem; color:var(--muted); line-height:1.55;">Add a known site — beach, quarry or cliff section — with geological context, SSSI flags and BGS formation lookup from your GPS position.</p>
+          </div>
+          <div style="background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:1.6rem; position:relative;">
+            <div style="font-family:'Playfair Display',serif; font-size:2.5rem; font-weight:900; color:var(--accent-border); line-height:1; position:absolute; top:1rem; right:1.25rem;">2</div>
+            <div style="font-size:0.65rem; font-weight:800; text-transform:uppercase; letter-spacing:0.14em; color:var(--accent); margin-bottom:0.6rem;">Field Trips</div>
+            <h3 style="font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:700; color:var(--text); margin-bottom:0.5rem; padding-right:2.5rem;">Open a field session</h3>
+            <p style="font-size:0.87rem; color:var(--muted); line-height:1.55;">Start a session at a locality. All finds recorded during the trip are linked to the session — building a full, dated field trip record.</p>
+          </div>
+          <div style="background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:1.6rem; position:relative;">
+            <div style="font-family:'Playfair Display',serif; font-size:2.5rem; font-weight:900; color:var(--accent-border); line-height:1; position:absolute; top:1rem; right:1.25rem;">3</div>
+            <div style="font-size:0.65rem; font-weight:800; text-transform:uppercase; letter-spacing:0.14em; color:var(--accent); margin-bottom:0.6rem;">Finds</div>
+            <h3 style="font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:700; color:var(--text); margin-bottom:0.5rem; padding-right:2.5rem;">Record each specimen</h3>
+            <p style="font-size:0.87rem; color:var(--muted); line-height:1.55;">Quick GPS capture in the field. Add taxon, period, formation, photographs and taphonomy at the car or at home. Each specimen gets a unique reference code.</p>
+          </div>
+          <div style="background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:1.6rem; position:relative;">
+            <div style="font-family:'Playfair Display',serif; font-size:2.5rem; font-weight:900; color:var(--accent-border); line-height:1; position:absolute; top:1rem; right:1.25rem;">4</div>
+            <div style="font-size:0.65rem; font-weight:800; text-transform:uppercase; letter-spacing:0.14em; color:var(--accent); margin-bottom:0.6rem;">Reports</div>
+            <h3 style="font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:700; color:var(--text); margin-bottom:0.5rem; padding-right:2.5rem;">Export and share</h3>
+            <p style="font-size:0.87rem; color:var(--muted); line-height:1.55;">Generate a printable PDF field report. Export your full collection as a JSON backup. Share selected specimens to FossilMapped when your record is ready.</p>
+          </div>
+        </div>
+        <div style="background:var(--panel-raised); border:1px solid var(--border); border-radius:var(--radius); padding:1.35rem 1.75rem; display:flex; flex-wrap:wrap; align-items:center; gap:1rem;">
+          <div style="font-size:0.65rem; font-weight:800; text-transform:uppercase; letter-spacing:0.14em; color:var(--muted); white-space:nowrap;">App sections</div>
+          <div style="display:flex; flex-wrap:wrap; gap:0.5rem;">
+            <span style="background:var(--accent-dim); border:1px solid var(--accent-border); border-radius:999px; color:var(--muted-bright); font-size:0.78rem; font-weight:700; padding:0.3rem 0.85rem;">Home</span>
+            <span style="background:var(--accent-dim); border:1px solid var(--accent-border); border-radius:999px; color:var(--muted-bright); font-size:0.78rem; font-weight:700; padding:0.3rem 0.85rem;">Trips</span>
+            <span style="background:var(--accent-dim); border:1px solid var(--accent-border); border-radius:999px; color:var(--muted-bright); font-size:0.78rem; font-weight:700; padding:0.3rem 0.85rem;">Locations</span>
+            <span style="background:var(--accent-dim); border:1px solid var(--accent-border); border-radius:999px; color:var(--muted-bright); font-size:0.78rem; font-weight:700; padding:0.3rem 0.85rem;">Finds</span>
+            <span style="background:var(--accent-dim); border:1px solid var(--accent-border); border-radius:999px; color:var(--muted-bright); font-size:0.78rem; font-weight:700; padding:0.3rem 0.85rem;">Tools</span>
+          </div>
+          <div style="flex:1; min-width:200px; font-size:0.82rem; color:var(--muted); line-height:1.5; margin-left:0.5rem;">Quick specimen recording &nbsp;·&nbsp; Field trip records &nbsp;·&nbsp; Printable/exportable reports &nbsp;·&nbsp; JSON backup</div>
+        </div>
+      </div>
+    </section>
 
     <!-- ── WHY RECORDING MATTERS ── -->
     <section class="why-section" id="why-recording-matters">
@@ -676,7 +828,7 @@
           <h2 class="section-title">Location and context are as important<br>as the fossil itself.</h2>
           <p class="section-lead" style="margin:0 auto;">
             Recording where and how a fossil was found preserves information that can never be recovered once it's lost —
-            and turns a personal find into a genuine scientific contribution.
+            and turns a personal find into a long-term record.
           </p>
         </div>
 
@@ -688,8 +840,8 @@
           </div>
           <div class="why-card">
             <span class="why-number" aria-hidden="true">02</span>
-            <h3>Citizen science makes real contributions</h3>
-            <p>Amateur collectors recover significant material from UK sites every year. Properly documented finds contribute directly to palaeontological research, museum collections and geological surveys.</p>
+            <h3>Collectors create useful knowledge</h3>
+            <p>Amateur collectors recover significant material from UK sites every year. Properly documented finds can help fossil groups, local recorders and future collectors understand what was found and where.</p>
           </div>
           <div class="why-card">
             <span class="why-number" aria-hidden="true">03</span>
@@ -702,9 +854,7 @@
           <span class="why-callout-icon" aria-hidden="true">🔬</span>
           <div>
             <p>
-              <strong>More than a map.</strong> FossilMap is a full recording and research platform —
-              the equivalent of a national finds recording scheme for UK palaeontology. The map helps you
-              explore what's been found. The record is what makes it scientifically valuable.
+              <strong>More than a map.</strong> FossilMap helps collectors record better finds. FossilMapped helps those shared records become useful research data.
             </p>
           </div>
         </div>
@@ -717,7 +867,7 @@
         <div style="text-align:center; max-width:580px; margin:0 auto;">
           <span class="section-tag">Who it's for</span>
           <h2 class="section-title">Built for collectors.<br><span style="color:var(--accent)">Open to everyone.</span></h2>
-          <p class="section-lead" style="margin:0.75rem auto 0; max-width:500px;">From a first find on a family beach trip to a serious research collection — FossilMap works at every level, and your records contribute to the wider picture.</p>
+          <p class="section-lead" style="margin:0.75rem auto 0; max-width:500px;">From a first find on a family beach trip to a serious long-term collection — FossilMap works at every level, and your records contribute to the wider picture.</p>
         </div>
 
         <div class="audience-grid">
@@ -726,7 +876,7 @@
           <div class="audience-card collector" id="collectors">
             <span class="audience-badge green">Collectors</span>
             <h3>Record your finds properly, from the very first one.</h3>
-            <p>Whether this is your first find or your five-hundredth, the record you make now is the one that lasts. FossilMap makes good recording simple — quick enough in the rain, rigorous enough for research.</p>
+            <p>Whether this is your first find or your five-hundredth, the record you make now is the one that lasts. FossilMap makes good recording simple — quick enough in the rain, detailed enough for a serious collection.</p>
             <ul class="benefit-list">
               <li class="benefit-item">
                 <span class="benefit-tick green">✓</span>
@@ -742,21 +892,25 @@
               </li>
               <li class="benefit-item">
                 <span class="benefit-tick green">✓</span>
+                <span><strong style="color:var(--text)">Use geological context.</strong> Add formation, period and location detail so the find still makes sense years later.</span>
+              </li>
+              <li class="benefit-item">
+                <span class="benefit-tick green">✓</span>
                 <span><strong style="color:var(--text)">Track discoveries over time.</strong> Field trips, locality histories and collection completeness — your entire archive in one place.</span>
               </li>
               <li class="benefit-item">
                 <span class="benefit-tick green">✓</span>
-                <span><strong style="color:var(--text)">Contribute to research.</strong> Share verified finds to FossilMapped and become part of the national record — on your terms.</span>
+                <span><strong style="color:var(--text)">Contribute to the shared record.</strong> Share selected finds to FossilMapped and become part of the UK's growing fossil database — on your terms.</span>
               </li>
             </ul>
-            <a href="https://fenlanddavid.github.io/fossilmap/" class="btn btn-primary">Record Finds Free</a>
+            <a href="https://fenlanddavid.github.io/fossilmap/" class="btn btn-primary">Open FossilMap</a>
           </div>
 
           <!-- RESEARCHERS -->
           <div class="audience-card researcher" id="researchers">
             <span class="audience-badge blue">Researchers</span>
-            <h3>Access verified UK fossil data.</h3>
-            <p>FossilMapped aggregates collector-submitted finds with full provenance — GPS coordinates, formation, stage, element and photographs. The dataset grows with every recorded discovery.</p>
+            <h3>Useful data from collector records.</h3>
+            <p>FossilMapped brings together shared fossil records with provenance — GPS coordinates, formation, stage, element and photographs. The database grows with every collector who chooses to share.</p>
             <ul class="benefit-list">
               <li class="benefit-item">
                 <span class="benefit-tick blue">✓</span>
@@ -768,7 +922,7 @@
               </li>
               <li class="benefit-item">
                 <span class="benefit-tick blue">✓</span>
-                <span><strong style="color:var(--text)">Citable BibTeX references.</strong> Every shared find generates a citable reference, downloadable directly from the portal.</span>
+                <span><strong style="color:var(--text)">Permanent record references.</strong> Every shared fossil receives a unique reference and permanent link for long-term access.</span>
               </li>
               <li class="benefit-item">
                 <span class="benefit-tick blue">✓</span>
@@ -776,12 +930,42 @@
               </li>
               <li class="benefit-item">
                 <span class="benefit-tick blue">✓</span>
-                <span><strong style="color:var(--text)">Research-quality standards.</strong> Records include element, preservation mode, taphonomy and find context — the fields that make data scientifically usable.</span>
+                <span><strong style="color:var(--text)">Complete record structure.</strong> Records include element, preservation mode, taphonomy and find context — the fields that make shared data useful.</span>
               </li>
             </ul>
-            <a href="https://fenlanddavid.github.io/fossilmapped/" class="btn btn-blue" target="_blank" rel="noopener noreferrer">Explore Research Data &#8599;</a>
+            <a href="https://fenlanddavid.github.io/fossilmapped/" class="btn btn-blue" target="_blank" rel="noopener noreferrer">Explore FossilMapped &#8599;</a>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ── RECORD LEVELS ── -->
+    <section class="trust-section">
+      <div class="container">
+        <div style="text-align:center; max-width:680px; margin:0 auto;">
+          <span class="section-tag">Record status tiers</span>
+          <h2 class="section-title">Community, Verified<br><span style="color:var(--blue)">and Research Grade.</span></h2>
+          <p class="section-lead" style="margin:0 auto;">
+            FossilMapped supports record status tiers, helping separate community-submitted records from verified and research-grade records. Every shared find starts as a community record and may advance with further review.
+          </p>
+        </div>
+        <div class="trust-grid">
+          <article class="trust-card">
+            <span class="trust-icon" aria-hidden="true">🩶</span>
+            <h3>Community Record</h3>
+            <p>Submitted by collectors and shared to the public fossil database. Visible to all, open for community engagement.</p>
+          </article>
+          <article class="trust-card">
+            <span class="trust-icon" aria-hidden="true">🔵</span>
+            <h3>Verified Record</h3>
+            <p>Reviewed and confirmed by trusted verifiers. Taxon, geological context and provenance have been checked.</p>
+          </article>
+          <article class="trust-card">
+            <span class="trust-icon" aria-hidden="true">🟢</span>
+            <h3>Research Grade Record</h3>
+            <p>High-quality records with strong supporting evidence. Suitable for citation, long-term research and institutional reference.</p>
+          </article>
         </div>
       </div>
     </section>
@@ -793,7 +977,7 @@
           <span class="section-tag gold">Platform impact</span>
           <h2 class="section-title">A growing national dataset.</h2>
           <p class="section-lead" style="margin:0 auto; max-width:520px;">
-            Every recorded find adds to the permanent scientific record of Britain's fossil heritage.
+            Every shared find adds to the growing public record of Britain's fossil heritage.
           </p>
         </div>
         <div class="stats-grid" role="list">
@@ -813,8 +997,8 @@
             <div class="stat-note">UK geology</div>
           </div>
           <div class="stat-cell" role="listitem">
-            <div class="stat-value" id="stat-research">—</div>
-            <div class="stat-label">Research records</div>
+            <div class="stat-value" id="stat-public">—</div>
+            <div class="stat-label">Public records</div>
             <div class="stat-note">publicly available</div>
           </div>
         </div>
@@ -829,10 +1013,27 @@
       <div class="container">
         <div class="section-intro">
           <span class="section-tag">What gets recorded</span>
-          <h2 class="section-title">A record that stands up to scrutiny.</h2>
+          <h2 class="section-title">A better record, without extra fuss.</h2>
           <p class="section-lead" style="margin:0 auto;">
-            FossilMap captures the full dataset that serious recorders and institutions actually need — not just taxon and location, but every field that makes a specimen scientifically usable.
+            FossilMap helps you capture the details that are easy to forget in the field — not just the name of the fossil, but the place, photographs and geological context that make the record useful later.
           </p>
+        </div>
+
+        <div class="quality-box">
+          <h3>Quality indicators</h3>
+          <p>Quality indicators help researchers see which records contain the strongest supporting information. FossilMap tracks completeness across the fields that matter most — so a record that includes GPS, taxon, formation, photographs and measurements is clearly distinguishable from one that does not.</p>
+          <ul class="quality-list" aria-label="Quality indicator fields">
+            <li>✓ GPS location</li>
+            <li>✓ Taxon identified</li>
+            <li>✓ Skeletal element</li>
+            <li>✓ Geological formation</li>
+            <li>✓ Stage &amp; member</li>
+            <li>✓ Photographs</li>
+            <li>✓ Measurements</li>
+            <li>✓ Stratigraphic context</li>
+            <li>✓ Repository / accession</li>
+            <li>✓ Contactable record</li>
+          </ul>
         </div>
 
         <div class="recording-grid">
@@ -845,19 +1046,20 @@
             <div id="tab-specimen" class="record-panel active">
               <ul class="feature-list">
                 <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>Taxon with confidence grading</b><span>High, medium or low — honest uncertainty is better data than false certainty.</span></div></li>
-                <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>Full stratigraphic context</b><span>Period, stage, formation, member and bed — every specimen placed in geological time.</span></div></li>
+                <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>Geological context</b><span>Period, stage, formation, member and bed — every specimen placed in geological time.</span></div></li>
                 <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>Element and preservation mode</b><span>Body fossil, trace, mould, cast, permineralised — taphonomy is part of the record.</span></div></li>
                 <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>GPS provenance in the field</b><span>One tap captures exact find position. Fill the detail in later — the location is never lost.</span></div></li>
                 <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>Photographs with scale annotation</b><span>In-situ, cleaned and scale photos with drawing annotation — before context is gone.</span></div></li>
-                <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>Citable specimen codes</b><span>Every record gets a unique UK-YEAR-XXXXXX reference traceable through preparation and reporting.</span></div></li>
+                <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>Specimen codes</b><span>Every record gets a unique UK-YEAR-XXXXXX reference traceable through preparation and reporting.</span></div></li>
               </ul>
             </div>
 
             <div id="tab-locality" class="record-panel">
               <ul class="feature-list">
+                <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>Geology lookup</b><span>Use British Geological Survey mapping to help identify the geology beneath your find location. Formation, period and geological context can be added directly from your GPS position.</span></div></li>
                 <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>Full geological context per site</b><span>Period, stage, formation, lithology and exposure type — every specimen placed in its stratigraphic setting.</span></div></li>
                 <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>SSSI and RIGS designation flags</b><span>Mark protected sites and record consent — so records reflect the legal context of each locality.</span></div></li>
-                <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>Record completeness indicator</b><span>FossilMap tracks which fields are populated — useful when preparing for reporting or repository deposit.</span></div></li>
+                <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>Record completeness indicator</b><span>FossilMap shows which important fields are populated — useful when building a better long-term record.</span></div></li>
                 <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>All finds linked to their site</b><span>Every specimen tied to its locality. Browse a site and see the full collection recovered from it.</span></div></li>
               </ul>
             </div>
@@ -895,16 +1097,21 @@
             <p>Open a session at a locality and add finds as you recover them. Notes, photographs and GPS — tied to the trip record in real time.</p>
           </div>
           <div class="trip-card">
+            <div class="trip-card-label">Geology lookup</div>
+            <h3>British Geological Survey context</h3>
+            <p>Use BGS mapping to help identify the geology beneath your find location. Formation, period and geological context can be added directly from your GPS position.</p>
+          </div>
+          <div class="trip-card">
             <div class="trip-card-label">Quick Find</div>
             <h3>Gloves on. Rain falling.</h3>
             <p>One tap logs GPS position immediately. Add taxon, period and context later — at the car or at home. The location is never lost.</p>
           </div>
-          <div class="trip-card">
+          <div class="trip-card optional-mobile">
             <div class="trip-card-label">PDF report</div>
             <h3>Exportable field record</h3>
             <p>Generate a complete PDF from the session — suitable for club records, planning condition documentation or personal archives.</p>
           </div>
-          <div class="trip-card">
+          <div class="trip-card optional-mobile">
             <div class="trip-card-label">Tide times</div>
             <h3>Foreshore planning</h3>
             <p>UK Environment Agency gauge readings built in. Know when the water turns — before you leave home. Includes foreshore safety guidance.</p>
@@ -927,12 +1134,12 @@
           <div class="find-card">
             <div class="find-taxon">Dactylioceras commune</div>
             <div class="find-meta">Jurassic · Toarcian<br>Whitby Mudstone Fm · Yorkshire</div>
-            <span class="find-tag green">Shared to research</span>
+            <span class="find-tag green">Shared record</span>
           </div>
           <div class="find-card">
             <div class="find-taxon">Gryphaea arcuata</div>
             <div class="find-meta">Jurassic · Hettangian<br>Blue Lias Fm · Dorset</div>
-            <span class="find-tag green">Shared to research</span>
+            <span class="find-tag green">Shared record</span>
           </div>
           <div class="find-card">
             <div class="find-taxon">Acanthoteuthis sp.</div>
@@ -942,7 +1149,7 @@
           <div class="find-card">
             <div class="find-taxon">Asteroceras obtusum</div>
             <div class="find-meta">Jurassic · Sinemurian<br>Blue Lias Fm · Somerset</div>
-            <span class="find-tag green">Shared to research</span>
+            <span class="find-tag green">Shared record</span>
           </div>
           <div class="find-card">
             <div class="find-taxon">Ichthyosaurus communis</div>
@@ -962,31 +1169,36 @@
         <div class="fm-grid">
           <div>
             <span class="fm-badge">
-              &#8599; FossilMapped &nbsp;·&nbsp; Research portal
+              &#8599; FossilMapped &nbsp;·&nbsp; The UK's growing fossil occurrence database
             </span>
-            <h2 class="section-title">Your verified finds.<br><span style="color:var(--blue)">The wider record.</span></h2>
+            <h2 class="section-title">The shared research portal.<br><span style="color:var(--blue)">Public records. Proper data.</span></h2>
             <p style="font-size:1rem; color:var(--muted-bright); line-height:1.75; margin-bottom:1.5rem; font-weight:500;">
-              FossilMapped is the companion research portal. When a find is complete — locality, stratigraphy, GPS, photographs — you can choose to contribute it to the UK community record. Your data, shared on your terms.
+              FossilMapped is the public research portal for shared UK fossil records. Only records explicitly shared from FossilMap appear here — community-submitted, verified and research-grade finds from collectors across the country.
+            </p>
+            <p style="font-size:0.95rem; color:var(--muted-bright); line-height:1.7; margin-bottom:1.25rem;">
+              Every shared record can be explored through a spatial map, record list, visual gallery, analytics dashboard and export tools. Records receive a permanent reference, citation tools and BibTeX download for academic use.
             </p>
             <p style="font-size:0.9rem; color:var(--muted); line-height:1.7; margin-bottom:2rem;">
               Nothing is shared automatically. FossilMap stores everything locally. Sharing to FossilMapped is an explicit, specimen-by-specimen choice — when the record meets your own standard.
             </p>
             <ul class="feature-list" style="margin-bottom:2rem;">
-              <li class="feature-item"><div class="feature-dot-blue"></div><div class="feature-text"><b>Browse the UK community find record</b><span>Verified finds filtered by period, taxon, formation and region — spatial map, record list and visual gallery.</span></div></li>
-              <li class="feature-item"><div class="feature-dot-blue"></div><div class="feature-text"><b>Contribute when your record is ready</b><span>Share with verified stratigraphic context and GPS provenance — the data that makes a community record scientifically useful.</span></div></li>
-              <li class="feature-item"><div class="feature-dot-blue"></div><div class="feature-text"><b>Citable BibTeX records</b><span>Every shared find generates a citable reference. Download a BibTeX entry directly from the portal.</span></div></li>
-              <li class="feature-item"><div class="feature-dot-blue"></div><div class="feature-text"><b>Research access requests</b><span>Collectors who opt in can be contacted directly — supporting further study of significant finds.</span></div></li>
+              <li class="feature-item"><div class="feature-dot-blue"></div><div class="feature-text"><b>Spatial map, record list and gallery</b><span>Browse shared public records by location on a map, as a searchable database, or through a visual photo gallery.</span></div></li>
+              <li class="feature-item"><div class="feature-dot-blue"></div><div class="feature-text"><b>Filter by taxon, period, formation and region</b><span>Search and narrow records by any combination of geological or taxonomic criteria. Every shared record includes GPS coordinates captured in the field.</span></div></li>
+              <li class="feature-item"><div class="feature-dot-blue"></div><div class="feature-text"><b>Analytics and CSV / JSON export</b><span>Distribution charts and occurrence patterns across the growing UK dataset. Download filtered record sets with all provenance fields intact.</span></div></li>
+              <li class="feature-item"><div class="feature-dot-blue"></div><div class="feature-text"><b>Citation and BibTeX download</b><span>Every shared fossil receives a permanent HRID reference, direct link and citation tools including BibTeX for academic use.</span></div></li>
+              <li class="feature-item"><div class="feature-dot-blue"></div><div class="feature-text"><b>Contactable records</b><span>Collectors who opt in can be contacted directly — supporting follow-up study of significant finds.</span></div></li>
+              <li class="feature-item"><div class="feature-dot-blue"></div><div class="feature-text"><b>Public shared records only</b><span>FossilMapped shows only what collectors have chosen to share. Private records stay on the collector's device, never visible here.</span></div></li>
             </ul>
-            <a href="https://fenlanddavid.github.io/fossilmapped/" class="btn btn-blue" target="_blank" rel="noopener noreferrer">Visit FossilMapped &#8599;</a>
+            <a href="https://fenlanddavid.github.io/fossilmapped/" class="btn btn-blue" target="_blank" rel="noopener noreferrer">Browse FossilMapped &#8599;</a>
           </div>
 
           <div style="display:flex; flex-direction:column; gap:1.25rem;">
             <article class="screen-card blue">
-              <div class="screen-media">
-                <img src="fossilmapped.png" alt="FossilMapped shared research portal on a mobile phone" loading="lazy" />
+              <div class="screen-media fm-preview">
+                <img src="fossilmapped.png" alt="FossilMapped shared fossil database on a mobile phone" loading="lazy" />
               </div>
               <div class="screen-caption">
-                <b>Shared research portal</b>
+                <b>Shared fossil database</b>
                 <span>Public finds explored as a map, record list, gallery and analytics dashboard.</span>
               </div>
             </article>
@@ -999,6 +1211,18 @@
                 <div class="checklist-item"><span class="checklist-tick">✓</span><span>GPS coordinates captured in the field</span></div>
                 <div class="checklist-item"><span class="checklist-tick">✓</span><span>At least one in-situ photograph</span></div>
                 <div class="checklist-item"><span class="checklist-tick">✓</span><span>Find context or taphonomy notes</span></div>
+                <div class="checklist-item"><span class="checklist-tick">✓</span><span>Skeletal element recorded</span></div>
+              </div>
+            </div>
+
+            <div class="fm-support" style="background:var(--blue-dim); border:1px solid var(--blue-border); border-radius:16px; padding:1.5rem;">
+              <div style="font-size:0.62rem; font-weight:800; text-transform:uppercase; letter-spacing:0.14em; color:var(--blue); margin-bottom:1rem;">Every shared fossil receives</div>
+              <div class="checklist">
+                <div class="checklist-item"><span class="checklist-tick">✓</span><span>Unique HRID reference</span></div>
+                <div class="checklist-item"><span class="checklist-tick">✓</span><span>Permanent link</span></div>
+                <div class="checklist-item"><span class="checklist-tick">✓</span><span>Citation tools and BibTeX download</span></div>
+                <div class="checklist-item"><span class="checklist-tick">✓</span><span>Research access options</span></div>
+                <div class="checklist-item"><span class="checklist-tick">✓</span><span>Quality completeness indicator</span></div>
               </div>
             </div>
 
@@ -1007,10 +1231,10 @@
               <div class="research-pills">
                 <span class="research-pill">Amateur collectors</span>
                 <span class="research-pill">Geology clubs</span>
-                <span class="research-pill">Field researchers</span>
-                <span class="research-pill">Museum volunteers</span>
-                <span class="research-pill">Planning recorders</span>
-                <span class="research-pill">University groups</span>
+                <span class="research-pill">Local recorders</span>
+                <span class="research-pill">Fossil groups</span>
+                <span class="research-pill">Students</span>
+                <span class="research-pill">Researchers</span>
               </div>
             </div>
 
@@ -1027,42 +1251,42 @@
     <section class="science-section mobile-supplemental">
       <div class="container">
         <div style="text-align:center; max-width:600px; margin:0 auto;">
-          <span class="section-tag gold">Research & scientific value</span>
-          <h2 class="section-title">Serious science. Accessible data.</h2>
+          <span class="section-tag gold">Long-term value</span>
+          <h2 class="section-title">Useful beyond your collection.</h2>
           <p class="section-lead" style="margin:0 auto;">
-            FossilMap is designed to produce data that is genuinely useful for research — not just interesting to collectors.
+            A good fossil record helps you understand your own finds, preserve provenance and share useful information when the record is ready.
           </p>
         </div>
         <div class="science-grid">
           <div class="science-card">
             <div class="science-icon" aria-hidden="true">🗺️</div>
-            <h3>Distribution analysis</h3>
-            <p>GPS-referenced finds enable spatial analysis of UK fossil distributions across formations, epochs and regions.</p>
+            <h3>Find patterns</h3>
+            <p>GPS-referenced finds help show where fossils occur across formations, periods and regions.</p>
           </div>
           <div class="science-card">
             <div class="science-icon" aria-hidden="true">📐</div>
-            <h3>Stratigraphic correlation</h3>
-            <p>Formation, member and bed data on every record enables stratigraphic study across geographically distant localities.</p>
+            <h3>Geological context</h3>
+            <p>Formation, member and bed details keep each fossil connected to the layer it came from.</p>
           </div>
           <div class="science-card">
             <div class="science-icon" aria-hidden="true">🔗</div>
-            <h3>Collector liaison</h3>
-            <p>Significant finds can be followed up. Collectors who opt in are contactable, supporting further study of their material.</p>
+            <h3>Collector contact options</h3>
+            <p>Significant finds can be followed up if the collector chooses to make contact possible.</p>
           </div>
           <div class="science-card">
             <div class="science-icon" aria-hidden="true">📖</div>
-            <h3>Citable references</h3>
-            <p>BibTeX citation export on every shared find makes FossilMapped records directly usable in academic publication.</p>
+            <h3>Permanent references</h3>
+            <p>Shared fossils receive stable references and links, so the record can be found again later.</p>
           </div>
           <div class="science-card">
             <div class="science-icon" aria-hidden="true">🏛️</div>
-            <h3>Museum-ready records</h3>
-            <p>Record completeness indicators, SSSI flags and full provenance data make FossilMap records suitable for repository deposit.</p>
+            <h3>Well-kept records</h3>
+            <p>Completeness indicators, protected-site flags and provenance help keep important details together.</p>
           </div>
           <div class="science-card">
             <div class="science-icon" aria-hidden="true">🧬</div>
-            <h3>Taphonomic data</h3>
-            <p>Preservation mode, element and find context fields capture taphonomic information that supports palaeoecological study.</p>
+            <h3>Preservation notes</h3>
+            <p>Element, preservation mode, taphonomy and find context help explain what the fossil actually represents.</p>
           </div>
         </div>
       </div>
@@ -1082,7 +1306,7 @@
           <div class="privacy-item"><b>Local-first by design</b><span>Everything on your device — works fully offline with no signal or account required.</span></div>
           <div class="privacy-item"><b>No automatic sharing</b><span>Records, GPS positions and photographs are never synced without your deliberate action.</span></div>
           <div class="privacy-item"><b>Full data export</b><span>Export your entire collection as a JSON backup at any time. Your data, not held elsewhere.</span></div>
-          <div class="privacy-item"><b>Selective sharing to FossilMapped</b><span>Share individual specimens to the research portal — one by one, when the record is ready.</span></div>
+          <div class="privacy-item"><b>Selective sharing to FossilMapped</b><span>Share individual specimens to the public fossil database — one by one, when the record is ready.</span></div>
         </div>
       </div>
     </section>
@@ -1107,12 +1331,12 @@
             <p class="faq-a">Specimen recording, locality management, field trip tracking and collection browsing all work offline with no signal. Tide gauge readings and map tiles require a connection, but tiles are cached after your first visit to an area.</p>
           </details>
           <details class="faq-item">
-            <summary class="faq-q">Is it suitable for research-quality recording?</summary>
-            <p class="faq-a">That is what it is designed for. FossilMap captures period, stage, formation, member, bed, primary lithology, exposure type, element, preservation mode, taphonomy, find context, GPS coordinates and photographs — the full dataset that makes a specimen record scientifically usable.</p>
+            <summary class="faq-q">Is it suitable for serious recording?</summary>
+            <p class="faq-a">Yes. FossilMap captures period, stage, formation, member, bed, primary lithology, exposure type, element, preservation mode, taphonomy, find context, GPS coordinates and photographs — the details that make a fossil record useful long after the find is made.</p>
           </details>
           <details class="faq-item">
             <summary class="faq-q">What is FossilMapped?</summary>
-            <p class="faq-a">FossilMapped is the companion research portal. When a FossilMap record is complete, you can share it so others can see what is being found across the UK. It includes a spatial map, a searchable database, a visual gallery and per-record BibTeX citations for academic use. Nothing is shared automatically — always specimen by specimen, on your terms.</p>
+            <p class="faq-a">FossilMapped is the public research portal for shared UK fossil records. It includes a spatial map, searchable record list, visual gallery, analytics dashboard, and CSV/JSON export. Shared fossils receive a permanent HRID reference, citation tools and BibTeX download. FossilMapped supports Community, Verified and Research Grade record tiers, and collectors who opt in can be contacted directly for significant finds. Only records explicitly shared from FossilMap appear here — nothing is shared automatically.</p>
           </details>
           <details class="faq-item">
             <summary class="faq-q">What kinds of fossil can I record?</summary>
@@ -1136,10 +1360,11 @@
         <h2>Start recording properly.<br><span style="color:var(--accent)">Today.</span></h2>
         <p>Whether this is your first find or your five-hundredth, the record you build today is the one that lasts — for your own collection, and potentially for science.</p>
         <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin-bottom:1rem;">
-          <a href="https://fenlanddavid.github.io/fossilmap/" class="btn btn-primary" style="padding:1rem 2.5rem; font-size:1rem;">Record Finds Free</a>
-          <a href="https://fenlanddavid.github.io/fossilmapped/" class="btn btn-blue" style="padding:1rem 1.75rem;" target="_blank" rel="noopener noreferrer">Explore Research Data &#8599;</a>
+          <a href="https://fenlanddavid.github.io/fossilmap/" class="btn btn-primary" style="padding:1rem 2.5rem; font-size:1rem;">Open FossilMap</a>
+          <a href="https://fenlanddavid.github.io/fossilmapped/" class="btn btn-blue" style="padding:1rem 1.75rem;" target="_blank" rel="noopener noreferrer">Browse FossilMapped &#8599;</a>
         </div>
         <p style="font-size:0.78rem; color:var(--muted); font-weight:700; letter-spacing:0.04em;">No account. No subscription. Your data stays on your device.</p>
+        <p style="font-size:0.8rem; color:var(--muted); font-style:italic; margin-top:0.5rem; font-weight:500;">Record privately first. Share only when you are ready.</p>
       </div>
     </section>
 
@@ -1148,7 +1373,7 @@
   <footer>
     <div class="container">
       <p>&copy; <span id="year"></span> FossilMap. All rights reserved.</p>
-      <p style="font-size:0.78rem; color:var(--muted); opacity:0.6; margin:0.35rem 0 0;">UK fossil recording and research platform. Companion research portal: <a href="https://fenlanddavid.github.io/fossilmapped/" style="color:inherit; opacity:0.85;">FossilMapped</a>.</p>
+      <p style="font-size:0.78rem; color:var(--muted); opacity:0.6; margin:0.35rem 0 0;">UK fossil recording platform. Shared fossil database: <a href="https://fenlanddavid.github.io/fossilmapped/" style="color:inherit; opacity:0.85;">FossilMapped</a>.</p>
       <div style="margin-top:1rem; display:flex; flex-wrap:wrap; justify-content:center; gap:0.4rem 1.25rem; font-size:0.78rem; font-weight:700;">
         <a href="terms.html" style="color:var(--muted); text-decoration:none; opacity:0.6;">Terms of Use</a>
         <a href="privacy.html" style="color:var(--muted); text-decoration:none; opacity:0.6;">Privacy</a>
@@ -1179,7 +1404,7 @@
         if (d.fossils)    document.getElementById("stat-fossils").textContent    = d.fossils.toLocaleString();
         if (d.species)    document.getElementById("stat-species").textContent    = d.species.toLocaleString();
         if (d.formations) document.getElementById("stat-formations").textContent = d.formations.toLocaleString();
-        if (d.research)   document.getElementById("stat-research").textContent   = d.research.toLocaleString();
+        if (d.publicRecords || d.research) document.getElementById("stat-public").textContent = (d.publicRecords || d.research).toLocaleString();
       } catch (_) {
         /* stats remain as — until data is available */
       }
