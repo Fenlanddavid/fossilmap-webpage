@@ -1007,7 +1007,7 @@
                 <div style="font-family:'DM Sans',sans-serif; font-size:2.5rem; font-weight:900; color:var(--accent-border); line-height:1; position:absolute; top:1rem; right:1.25rem;">1</div>
                 <div style="font-size:0.65rem; font-weight:800; text-transform:uppercase; letter-spacing:0.14em; color:var(--accent); margin-bottom:0.6rem;">Locations</div>
                 <h3 style="font-family:'DM Sans',sans-serif; font-size:1rem; font-weight:700; color:var(--text); margin-bottom:0.5rem; padding-right:2.5rem;">Set up your localities</h3>
-                <p style="font-size:0.87rem; color:var(--muted); line-height:1.55;">Add a known site &mdash; beach, quarry or cliff section &mdash; with geological context, SSSI flags and BGS formation lookup from your GPS position.</p>
+                <p style="font-size:0.87rem; color:var(--muted); line-height:1.55;">Add a locality and let FossilMap automatically identify formation, period and geological context using British Geological Survey mapping.</p>
               </div>
               <div style="background:var(--panel); border:1px solid var(--border); border-radius:var(--radius); padding:1.6rem; position:relative;">
                 <div style="font-family:'DM Sans',sans-serif; font-size:2.5rem; font-weight:900; color:var(--accent-border); line-height:1; position:absolute; top:1rem; right:1.25rem;">2</div>
@@ -1099,7 +1099,7 @@
 
                 <div id="tab-locality" class="record-panel">
                   <ul class="feature-list">
-                    <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>BGS geology lookup</b><span>Use British Geological Survey mapping to help identify the geology beneath your find location. Formation, period and geological context added directly from your GPS position.</span></div></li>
+                    <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>Automatic Geological Context</b><span>Using British Geological Survey mapping, FossilMap can automatically identify and populate formation, period and geological context directly from your GPS location.</span></div></li>
                     <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>Full geological context per site</b><span>Period, stage, formation, lithology and exposure type &mdash; every specimen placed in its stratigraphic setting.</span></div></li>
                     <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>SSSI and RIGS designation flags</b><span>Mark protected sites and record consent &mdash; so records reflect the legal context of each locality.</span></div></li>
                     <li class="feature-item"><div class="feature-dot"></div><div class="feature-text"><b>Record completeness indicator</b><span>FossilMap shows which important fields are populated &mdash; useful when building a better long-term record.</span></div></li>
@@ -1140,9 +1140,14 @@
                 <p>Open a session at a locality and add finds as you recover them. Notes, photographs and GPS &mdash; tied to the trip record in real time.</p>
               </div>
               <div class="trip-card">
-                <div class="trip-card-label">Geology lookup</div>
-                <h3>British Geological Survey context</h3>
-                <p>Use BGS mapping to identify the geology beneath your find location. Formation, period and context added directly from your GPS position.</p>
+                <div class="trip-card-label">BGS mapping</div>
+                <h3>Automatic Geological Context</h3>
+                <p>Know more than where a fossil was found. FossilMap can automatically identify the geological formation and age beneath your feet.</p>
+              </div>
+              <div class="trip-card">
+                <div class="trip-card-label">Specimen labels</div>
+                <h3>QR Specimen Labels</h3>
+                <p>Print QR-coded specimen labels linked directly to the complete fossil record. No more mystery fossils in old trays.</p>
               </div>
               <div class="trip-card">
                 <div class="trip-card-label">Quick Find</div>
@@ -1501,6 +1506,9 @@
               </p>
               <p style="color:var(--muted); font-size:0.95rem; line-height:1.8; margin:0 0 1.1rem;">
                 Several members of the team have been involved in significant field work, including the excavation of the Rutland Sea Dragon and other specimens recovered across the UK. Those experiences have reinforced how important accurate provenance, geological context, photographs and field notes can be once a specimen leaves the ground.
+              </p>
+              <p style="color:var(--muted-bright); font-size:1rem; line-height:1.8; margin:0 0 1.1rem; border-left:3px solid var(--accent-border); padding-left:1rem;">
+                FossilMap aims to create the UK's largest collector-generated fossil occurrence dataset, preserving provenance, stratigraphy and geological context that might otherwise be lost.
               </p>
               <p style="color:var(--muted); font-size:0.95rem; line-height:1.8; margin:0;">
                 Our aim is to develop FossilMap and <a href="https://fenlanddavid.github.io/fossilmapped/" style="color:var(--accent);">FossilMapped</a> in partnership with universities, museums, geological societies and other professional organisations. Long term, we want the platform to become a trusted, Portable Antiquities Scheme-style route for the geology world: helping collectors record properly, share voluntarily and contribute useful data to research.
